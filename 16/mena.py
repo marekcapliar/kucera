@@ -11,3 +11,4 @@ spaces = len(longest_first_name)
 for i in range(len(zoz)//2):
     temp = zoz[i][:-1] + ((spaces-len(zoz[i])+1)*' ') + zoz[i + len(zoz)//2]
     fw.write(temp)
+fw.close()
