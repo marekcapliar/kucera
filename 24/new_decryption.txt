@@ -1,0 +1,56 @@
+CIA dokázala sledova  polohu osoby. Vïaka Wi-Fi sie am 
+Jednoduchá a pritom nenápadná technika umožnila pracovníkom CIA sledovanie cie¾ových osôb. 
+Organizácia WikiLeaks zverejnila ïalšiu èas  materiálov informujúcich o hackerských nástrojoch využívaných
+na presadzovanie práva. Tentoraz ide o malvér, ktorý sleduje zemepisnú polohu cie¾ovej osoby prostredníctvom 
+Wi-Fi modulu.
+
+Okolité siete prezradia polohu
+
+Americká Ústredná spravodajská služba (CIA) využívala pod¾a uniknutých informácií od roku 2012 nástroj oznaèený
+ako „Elsa“. Slúžil na presnú lokalizáciu osoby, respektíve poèítaèa v priestore, prièom k tomu využíval
+databázy Wi-Fi sietí, ktoré vytvorili spoloènosti Google a Microsoft.
+Lokalizaèný nástroj samozrejme funguje iba na zariadeniach obsahujúcich Wi-Fi modul a je urèený pre operaèný
+systém Windows. Cie¾ová osoba nemusí by  pripojená k žiadnej bezdrôtovej sieti, keïže sa presná poloha vypoèíta
+iba na základe sily signálu okolitých Wi-Fi sietí. Získané dáta sa následne porovnajú s databázou sietí
+z Google, prípadne Microsoftu. Výsledkom je presná poloha zariadenia.
+
+Poznámka redakcie: Totožný spôsob lokalizácie využíva Apple a Google pri urèovaní polohy smartfónu v prípade,
+ak nie je dostupná GPS lokalizácia.
+
+Malvér sa dá detailne nastavi 
+Pracovníci CIA najprv vytvoria prostredníctvom špecializovaného softvéru malvér na mieru pre cie¾ovú osobu.
+Môžu zvoli  druh architektúry zariadenia (x86, x64), typ infikovanej knižnice (dllhost, svchost, rundll32,
+ appinit) èi požadovaný zdroj geolokaèných dát (Google, Microsoft).
+Výsledný malvér je nutné nejakým spôsobom nainštalova  do cie¾ového poèítaèa.
+Uniknuté dokumenty síce nepopisujú techniku infiltrácie, no je pravdepodobné, že k tomu slúži niektorý
+z mnohých ïalších hackerských nástrojov.
+
+Po infikovaní zaène malvér zhromažïova  informácie o okolitých Wi-Fi sie ach na základe vopred definovaného
+èasového harmonogramu. Konkrétne sa zbierajú takzvané ESS dáta, ktoré obsahujú MAC adresu prístupového
+bodu (BSSID), jeho názov (SSID) a silu signálu (RSSI).
+
+Šifrované dáta putujú do CIA
+
+K získaným údajom je neskôr pripojená poloha každého prístupového bodu a výsledné dáta sú zašifrované
+128-bitovým AES k¾úèom. Po pripojení zariadenia k internetu sa zašifrovaný súbor odošle na riadiaci server,
+kde s ním môžu pracovníci CIA ïalej pracova  a zisti  napríklad návyky sledovanej osoby.
+Keïže sa databázy Wi-Fi sietí, ktoré spravuje Microsoft a Google postupom èasu zdokona¾ujú, je zrejmé,
+že aj CIA dokáže získa  ove¾a presnejšie informácie o pohybe cie¾ových osôb. Verejný prístup k databázam
+nie je možný a je urèený len pre vývojárov aplikácií vo forme špecifického API rozhrania.
+Pre verejnos  sú k dispozícii open-source projekty, napríklad Wigle.
+
+Tajné služby prišli o mnoho nástrojov
+
+Pripomeòme, že WikiLeaks zverejnila zaèiatkom marca prvú èas  informácií o hackerských nástrojoch,
+ktoré údajne využíva americká CIA. Zbierka materiálov dostala oznaèenie „Vault 7“.
+Pod¾a odhalení disponujú jej pracovníci širokým spektrom rôznych hackerských nástrojov.
+Vïaka nim dokážu prevzia  kontrolu nad ¾ubovo¾ným operaèným systémom (Windows, Linux èi macOS),
+ovládnu  smartfón so systémom iOS a Android èi hacknú  inteligentné televízory.
+
+Problémy sa nevyhli ani Americkej bezpeènostnej agentúre NSA, na ktorú si pre zmenu posvietili hackeri
+zo skupiny The Shadow Brokers. Na Ve¾ký piatok totiž zverejnili pôsobivú zbierku útoèných modulov,
+ktoré slúžia na prevzatie úplnej kontroly nad cie¾ovým poèítaèom èi na vytvorenie zadných vrátok.
+
+Práve tieto nástroje sa stali hnacím motorom legendárneho ransomvéru WannaCry a nového
+deštrukèného vírusu ExPetr.
+zdroj: http://www.zive.sk/clanok/126154/cia-dokazala-sledovat-polohu-osoby-vdaka-wi-fi-sietam
